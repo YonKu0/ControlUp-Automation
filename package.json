@@ -1,0 +1,30 @@
+{
+  "name": "controlup-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright + TypeScript automation framework (UI + API) for Sauce Demo and Airport Gap.",
+  "scripts": {
+    "test:all": "playwright test",
+    "test:ui": "playwright test --grep @ui",
+    "test:api": "playwright test --grep @api",
+    "test:headed": "playwright test --headed --project=chromium",
+    "test:report": "playwright show-report",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "typecheck": "tsc --noEmit",
+    "prepare": "playwright install --with-deps || playwright install"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^20.12.12",
+    "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-playwright": "^0.18.0",
+    "prettier": "^3.3.2",
+    "typescript": "^5.4.5"
+  }
+}
